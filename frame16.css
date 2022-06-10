@@ -1,0 +1,42 @@
+:root{
+    --color-primary: #EB4A5A;
+    --color-secundary: #f9fafc;
+    --color-third: #F6F3F3;
+    --color-fourth: #434343;
+    --color-fifth: #274671;
+}
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    /* font-size: 62.5%; */
+  }
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+ /* header */
+.main-background{
+    background-color: var(--color-primary);
+    text-align: center;
+}
+.main-background img{
+    height: 200px;
+}
+.container-header{
+    background-color:var(--color-third);
+    display: flex;
+    justify-content:space-between;
+    padding: 0 4.0rem;
+}
+.logo-academlo{
+    height: 50px;
+}
+ /* main filter */
+.container-filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+}
