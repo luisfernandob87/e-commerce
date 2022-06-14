@@ -10,7 +10,6 @@ html {
   }
   *, *:before, *:after {
     box-sizing: inherit;
-    /* font-size: 62.5%; */
   }
 body{
     margin: 0;
@@ -53,7 +52,6 @@ body{
     margin: 30px;
 }
 .container-item{
-    border-radius: 5px;
     display: flex;
     flex-direction: column;
 }
@@ -70,9 +68,19 @@ body{
     color: var(--color-third);
     cursor: pointer;
 }
-/* .container-item button:hover{
-    transform: scale(105%);
-} */
+/* footer */
+.container-footer{
+    background-color:var(--color-primary);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    padding: 0 4.0rem;
+    color: var(--color-secundary);
+}
+.logo-footer{
+    width: 50px;
+}
+
 @media (max-width: 925px) {
     .container-products{
         justify-content: center;
