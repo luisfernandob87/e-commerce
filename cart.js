@@ -1,21 +1,24 @@
 "use strict";
 
-let initialValue = [
-  { id: 1, imagen: 'playera_azul_version2.webp', nombre: 'Playera Azul',  precio: 100, stock: 5}
-];
+let shoppingCart = localStorage.getItem('shoppingCart');
+if (shoppingCart){
+  shoppingCart = JSON.parse(shoppingCart);
+}else{
+  shoppingCart = [];
+}
 
-function generateCardCart(initialValue) {
+function generateCardCart(shoppingCart) {
   const container = document.getElementById("container-cart");
 
   let html = "";
-  for (let j = 0; j < initialValue.length; j++) {
+  for (let j = 0; j < shoppingCart.length; j++) {
     html += `<div class="container-item">
-                        <img src="/img/${initialValue[j].imagen}" alt="Imagen de producto">
-                        <p>${initialValue[j].nombre}</p>
-                        <p>$${initialValue[j].precio}</p>
-                        <button>Agregar al carrito</button>
+                        <img src="/img/${shoppingCart[j].imagen}" alt="Imagen de producto">
+                        <p>${shoppingCart[j].nombre}</p>
+                        <p>$${shoppingCart[j].precio}</p>
                       </div>`;
   }
-  container.innerHTML += html;
+  container.innerHTML = html;
 }
-generateCardCart(initialValue);
+generateCardCart(shoppingCart);
+

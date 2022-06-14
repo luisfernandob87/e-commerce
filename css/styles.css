@@ -70,9 +70,9 @@ body{
     color: var(--color-third);
     cursor: pointer;
 }
-.container-item button:hover{
+/* .container-item button:hover{
     transform: scale(105%);
-}
+} */
 @media (max-width: 925px) {
     .container-products{
         justify-content: center;
