@@ -16,7 +16,7 @@ function generateCardCart(shoppingCart) {
                         <img src="/img/${shoppingCart[j].imagen}" alt="Imagen de producto">
                         <p>${shoppingCart[j].nombre}</p>
                         <p>$${shoppingCart[j].precio}</p>
-                        <button onclick="removeCart(${shoppingCart[j].id})")>X</button>
+                        <button onclick="removeCart(${shoppingCart[j].id})">X</button>
                       </div>`;
   }
   container.innerHTML += html;
@@ -34,16 +34,18 @@ function find(array, cb){
 }
 
 function removeCart(id) {
+
+
   function cbFindById(shoppingCart){
     return shoppingCart.id === id;
   }
-  let product = find(shoppingCart, cbFindById)
+  let product = find(shoppingCart, cbFindById);
   console.log(product);
-  list = JSON.parse(product);
-  // product.splice(product, 0)
-  console.log(list);
-  //  localStorage.removeItem('shoppingCart',JSON.stringify(shoppingCart))
-}
-//  generateCardCart(shoppingCart);
 
-// window.removeCart = removeCart;
+  
+  let del = JSON.parse(localStorage.getItem('shoppingCart'))
+  console.log(del);
+  del.splice(product.id,1);
+  localStorage.setItem('shoppingCart', JSON.stringify(del));
+  // window.location.reload()
+}
