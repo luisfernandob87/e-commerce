@@ -23,17 +23,21 @@ body{
     display: flex;
     justify-content:center;
     padding: 0 4.0rem;
+    margin-bottom: 20px;
 }
 .logo-academlo{
     height: 50px;
 }
 /* products */
-.container-item{
+.container-products{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+}
+.container-item{
+    text-align: center;
     border: 1px solid var(--color-third);
-    gap: 20px;
+    margin-bottom: 20px;
 }
 .container-item img{
     width: 150px;
@@ -42,14 +46,55 @@ body{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: 600;
 }
-button{
-    background-color: var(--color-primary);
-    color: var(--color-secundary);
+.remove{
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
     border-radius: 50%;
-    border: var(--color-third);
+    border: 0.5px solid var(--color-primary);
     width: 30px;
     height: 30px;
     cursor: pointer;
+    margin-bottom: 5px;
+}
+.remove:hover{
+    background-color: var(--color-primary);
+    border: 0.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+.remove:active{
+    background-color:#eb4a5a91;
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+.total{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 25px;
+}
+.total p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    color:var(--color-primary);
+    font-size: x-large;
+}
+.total button{
+    background-color: var(--color-secundary);
+    border-radius: 5px;
+    border: 0.5px solid var(--color-primary);
+    padding: 10px;
+    color: var(--color-primary);
+    cursor: pointer;
+}
+.total button:hover{
+    background-color: var(--color-primary);
+    border: 0.5px solid var(--color-primary);
+    color: var(--color-secundary);
+}
+.total button:active{
+    background-color:#eb4a5a91;
+    border: 1.5px solid var(--color-primary);
+    color: var(--color-secundary);
 }
 /* footer */
 .container-footer{
@@ -59,13 +104,8 @@ button{
     justify-content:space-between;
     padding: 0 4.0rem;
     color: var(--color-secundary);
+    
 }
 .logo-footer{
     width: 50px;
 }
-@media (max-width: 925px) {
-    .container-products{
-        justify-content: center;
-    }
-}
-
